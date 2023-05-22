@@ -1,0 +1,119 @@
+// import React,{ useState } from 'react';
+// import axios from 'axios';
+
+
+// const UploadForm = () => {
+// 	const [name, setName] = useState('')
+// 	const [genre, setGenre] = useState('')
+// 	const [disc, setDisc] = useState('');
+// 	const [dur, setDur] = useState('');
+// 	const [photo, setPhoto] = useState('');
+// 	const [videos, setVideos] = useState('');
+// 	const handleSubmit = (e) => {
+// 		e.preventDefault();
+
+// 		let formdata = new FormData();
+// 		console.log("jara hai");
+		
+// 		formdata.append("duration", dur);
+// 		console.log("abhi hai 1")
+		
+//       	formdata.append("disp", disc);
+// 		console.log("abhi hai 2");
+
+// 		formdata.append("name",name);
+// 		console.log("abhi hai 3");
+
+// 		formdata.append("genre",genre);
+// 		console.log("abhi hai 4");
+
+// 		formdata.append("photo", photo);
+// 		console.log("abhi hai 5");
+
+// 		formdata.append("videos", videos);
+// 		console.log("abhi hai 6");
+
+// 		console.log(formdata);
+
+// 		axios.post(`http://localhost:4000/movie`,formdata).then(success => {
+// 			alert('Submitted successfully')
+// 		}).catch(error => {
+// 			console.log(error);
+// 			alert('Error Happend')
+// 		})
+// 	};
+// 	return (
+//     <>
+//       <form action="" onSubmit={handleSubmit}>
+//         <div className="form-group">
+//           <label htmlFor="name">Name</label>
+//           <input
+//             type="text"
+//             name="name"
+//             id="name"
+//             className="form-control"
+//             onChange={(e) => setName(e.target.value)}
+//           />
+//           <label htmlFor="genre">Genre</label>
+//           <input
+//             type="text"
+//             name="genre"
+//             id="name"
+//             className="form-control"
+//             onChange={(e) => setGenre(e.target.value)}
+//           />
+//           <label htmlFor="disc">Discription</label>
+//           <input
+//             type="text"
+//             name="disc"
+//             id="name"
+//             className="form-control"
+//             onChange={(e) => setDisc(e.target.value)}
+//           />
+//           <label htmlFor="name">Duration</label>
+//           <input
+//             type="text"
+//             name="dur"
+//             id="name"
+//             className="form-control"
+//             onChange={(e) => setDur(e.target.value)}
+//           />
+//         </div>
+// 		<hr />
+//         <div className="form-group">
+//           <label htmlFor="videos">Upload Videos</label>
+//           <input
+//             type="file"
+//             name="videos"
+//             id="videos"
+//             multiple
+//             className="form-control"
+//             accept=".mp4,.mkv"
+//             onChange={(e) => {
+//               setVideos(e.target.files);
+//             }}
+//           />
+//           <label htmlFor="videos">Upload Poster</label>
+//           <input
+//             type="file"
+//             name="photo"
+//             id="videos"
+//             multiple
+//             className="form-control"
+//             accept=".png,.jpeg,.jpg"
+//             onChange={(e) => {
+//               setPhoto(e.target.files);
+//             }}
+//           />
+//         </div>
+// 		<hr />
+
+//         <button type="submit" className="btn btn-primary mt-2">
+//           Submit
+//         </button>
+//       </form>
+//     </>
+//   );
+// }
+
+// export default UploadForm;
